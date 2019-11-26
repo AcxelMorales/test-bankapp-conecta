@@ -10,7 +10,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { CardAccountsComponent } from './card-accounts/card-accounts.component';
 import { AddCardAccountsComponent } from './add-card-accounts/add-card-accounts.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { FormComponent } from './form/form.component';
 @NgModule({
   declarations: [
     NavComponent,
@@ -21,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     AccountsComponent,
     CardAccountsComponent,
     AddCardAccountsComponent,
-    FooterComponent
+    FooterComponent,
+    FormComponent
   ],
   exports: [
     NavComponent,
