@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from '../../services/data.service';
+import { IMovimientos } from '../../models/IMovimientos';
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  constructor() { }
+  data: IMovimientos[] = [];
 
-  ngOnInit() {
+  constructor(private _dataService: DataService) { }
+
+  ngOnInit(): void {
+    this._dataService.getMovimientos().subscribe(resp => {
+      this.data = resp;
+    });
   }
 
 }

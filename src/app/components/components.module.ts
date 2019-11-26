@@ -7,10 +7,11 @@ import { CardComponent } from './card/card.component';
 import { MainComponent } from './main/main.component';
 import { TableComponent } from './table/table.component';
 import { AccountsComponent } from './accounts/accounts.component';
-import { CardAccountsComponent } from './card-accounts/card-accounts.component';
 import { AddCardAccountsComponent } from './add-card-accounts/add-card-accounts.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
+
+import { ConvertPipe } from '../pipes/convert.pipe';
 @NgModule({
   declarations: [
     NavComponent,
@@ -19,10 +20,10 @@ import { FormComponent } from './form/form.component';
     MainComponent,
     TableComponent,
     AccountsComponent,
-    CardAccountsComponent,
     AddCardAccountsComponent,
     FooterComponent,
-    FormComponent
+    FormComponent,
+    ConvertPipe
   ],
   exports: [
     NavComponent,

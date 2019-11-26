@@ -1,9 +1,9 @@
 <div class="header">
   <div class="container-fluid">
     <div class="cards">
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
+      <app-card [cantidad]="cantidades?.saldo_general" [first]="'saldo general'" [second]="'en cuentas'"></app-card>
+      <app-card [cantidad]="cantidades?.ingresos" [first]="'total de'" [second]="'ingresos'"></app-card>
+      <app-card [cantidad]="cantidades?.gastos" [first]="'total de'" [second]="'gastos'"></app-card>
     </div>
   </div>
 </div>

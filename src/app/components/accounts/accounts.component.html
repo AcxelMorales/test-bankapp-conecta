@@ -1,6 +1,16 @@
 <h1>mis cuentas</h1>
 <div class="cards">
-  <app-card-accounts></app-card-accounts>
-  <app-card-accounts></app-card-accounts>
+  <div class="card" *ngFor="let t of tarjetas" [ngClass]="{'inactive': t.estado === 'desactivada'}">
+    <div class="data">
+      <p class="price">${{ t.saldo }}</p>
+      <span class="active-card">{{ t.estado.charAt(0).toUpperCase() + t.estado.slice(1) }}</span>
+      <p>{{ t.tarjeta.toString() | convert }}</p>
+      <p>{{ t.nombre }}</p>
+      <p class="titular">{{ t.tipo.charAt(0).toUpperCase() + t.tipo.slice(1) }}</p>
+      <div class="logo">
+        <img src="../../../assets/img/network.png" alt="logo">
+      </div>
+    </div>
+  </div>
   <app-add-card-accounts></app-add-card-accounts>
 </div>

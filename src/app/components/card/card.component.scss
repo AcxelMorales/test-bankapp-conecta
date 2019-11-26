@@ -3,6 +3,7 @@
   padding: 2em 1em;
   border-radius: 5px;
   margin-right: 1em;
+  width: 250px;
 
   .card-desc {
     display: flex;
@@ -14,13 +15,17 @@
       text-transform: uppercase;
       line-height: 15px;
       font-size: 12px;
-      margin-right: 2em;
+      // margin-right: 1em;
     }
 
     .price {
       color: #07be92;
       font-size: 27px;
       font-weight: 700;
+    }
+
+    .none {
+      color: #7a9093;
     }
   }
 }

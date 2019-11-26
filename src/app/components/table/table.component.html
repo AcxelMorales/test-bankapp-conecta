@@ -8,55 +8,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th scope="row">10/06/2019</th>
-      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, est quibusdam! Perspiciatis, totam id!</td>
-      <td>$800</td>
+    <tr *ngFor="let m of data">
+      <th scope="row">{{ m.fecha }}</th>
+      <td>{{ m.descripcion }}</td>
+      <td class="green" [ngClass]="{'red': m.tipo === 'cargo'}">${{ m.monto }}</td>
     </tr>
   </tbody>
 </table>
