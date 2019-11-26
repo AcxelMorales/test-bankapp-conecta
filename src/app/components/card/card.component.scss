@@ -1,0 +1,26 @@
+.card-price {
+  background-color: white;
+  padding: 2em 1em;
+  border-radius: 5px;
+  margin-right: 1em;
+
+  .card-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .desc {
+      color: #0791bf;
+      text-transform: uppercase;
+      line-height: 15px;
+      font-size: 12px;
+      margin-right: 2em;
+    }
+
+    .price {
+      color: #07be92;
+      font-size: 27px;
+      font-weight: 700;
+    }
+  }
+}
