@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
@@ -32,7 +33,8 @@ import { ConvertPipe } from '../pipes/convert.pipe';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ]
 })
 export class ComponentsModule { }

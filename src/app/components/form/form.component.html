@@ -11,38 +11,86 @@
         <h6>Agregar Tarjeta</h6>
       </div>
       <div class="modal-body">
-        <form>
+        <form [formGroup]="form" #f="ngForm">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Número de tarjeta" id="first">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Número de tarjeta"
+                formControlName="numero_tarjeta"
+                required
+            >
           </div>
           <div class="row m">
             <div class="col">
-              <input type="text" class="form-control" placeholder="Cuenta">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Cuenta"
+                formControlName="cuenta"
+                required
+                >
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Issuer">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Issuer"
+                formControlName="issuer"
+                required
+                >
             </div>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Nombre de tarjeta" id="first">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Nombre de tarjeta"
+                formControlName="nombre_tarjeta"
+                required
+            >
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Marca" id="first">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Marca"
+                formControlName="marca"
+                required
+            >
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Estatus" id="first">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Estatus"
+                formControlName="estatus"
+                required
+            >
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Saldo" id="first">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Saldo"
+                formControlName="saldo"
+                required
+            >
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Tipo de cuenta" id="first">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Tipo de cuenta"
+                formControlName="tipo_cuenta"
+                required
+            >
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button class="button-p cancel" data-dismiss="modal">Cancelar</button>
-        <button class="button-p ok">Agregar tarjeta</button>
+        <button [disabled]="form.invalid" class="button-p ok" (click)="send()">Agregar tarjeta</button>
       </div>
     </div>
   </div>

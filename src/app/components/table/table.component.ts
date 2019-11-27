@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+
+import { Subscription } from 'rxjs';
 
 import { DataService } from '../../services/data.service';
 import { IMovimientos } from '../../models/IMovimientos';
@@ -8,16 +10,20 @@ import { IMovimientos } from '../../models/IMovimientos';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent implements OnInit {
+export class TableComponent implements OnInit, OnDestroy {
 
   data: IMovimientos[] = [];
+
+  movimientosSubscription: Subscription = new Subscription();
 
   constructor(private _dataService: DataService) { }
 
   ngOnInit(): void {
-    this._dataService.getMovimientos().subscribe(resp => {
-      this.data = resp;
-    });
+    this.movimientosSubscription = this._dataService.getMovimientos().subscribe(resp => this.data = resp);
+  }
+
+  ngOnDestroy(): void {
+      this.movimientosSubscription.unsubscribe();
   }
 
 }
